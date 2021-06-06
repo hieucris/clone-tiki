@@ -1,0 +1,266 @@
+.header{
+    background: rgb(1, 127, 255);
+}
+.header .header--top{
+    height: 70px;
+}
+
+.header .header--top .header-left{
+    display: flex;
+    height: 70px;
+}
+.header-left .logo--link{
+    width: 60px;
+    height: 40px;
+    margin-top: 20px;
+}
+.header-left .logo{
+    width: 100%;
+    height: 100%;
+}
+.header-left .menu{
+    display: flex;
+    justify-content: space-between;
+    width: 130px;
+    margin-left: 50px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.header-left .menu .menu--bar{
+    display: flex;
+    align-items: center;
+}
+
+.menu--dropDown{
+    opacity: 0;
+}
+
+.header-left .menu .menu--bar i{
+    color: var(--white-color);
+    font-size: 2.6rem;
+}
+.header-left .menu .memu-text{
+    color: var(--white-color);
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+}
+.header-left .menu .menu--icon i{
+    color: var(--white-color);
+    font-size: 1rem;
+    margin-top: 26px;
+    }
+
+.header .header--top .header--formSearch{
+    display: flex;
+    margin-top: 22px;
+}
+.header--formSearch .formSearch__input{
+    width: 470px;
+    height: 40px;
+    border: none;
+    border-radius: 2px 0 0 2px;
+    padding-left: 20px;
+    font-size: 1.2rem;
+    font-style: italic;
+    outline: none;
+}
+.header--formSearch .btn--search{
+    width: 120px;
+    height: 40px;
+    border: none;
+    border-radius: 0 2px 2px 0;
+    background: rgb(13, 92, 182);
+    color: var(--white-color);
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+button.btn--search i {
+    font-size: 1.6rem;
+    margin-right: 2px;
+}
+
+.header .header--top .header-right{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-right .header--user__wrapper{
+    position: relative;
+}
+
+.header-right .header--user__wrapper .header--user__dropDown{
+    position: absolute;
+    top: 88px;
+    left: -36px;
+    width: 262px;
+    height: 277px;
+    border-radius: 5px;
+    background: var(--white-color);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease-in;
+}
+
+.header--user__wrapper:hover .header--user__dropDown{
+    opacity: 1;
+    visibility: visible;
+}
+
+.header--user__dropDown:after {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg)translateX(-50%);
+    background: var(--white-color);
+}
+.header--user__dropDown .btn-login,.btn-register{
+    display: block;
+    width: 90%;
+    margin: 15px auto;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 0px;
+    font-size: 1.4rem;
+    background: rgb(253, 216, 53);
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.btn-account:hover{
+    opacity: 0.7;
+}
+
+.header--user__dropDown .btn-facebook,.btn-google,.btn-twitter{
+    width: 90%;
+    height: 40px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    background: rgb(59, 89, 152);
+    color: var(--white-color);
+    cursor: pointer;
+    transition: 0.4s;
+}
+.logo__login {
+    width: 40px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid gray;
+    margin-right: 10px;
+}
+.header--user__dropDown .btn-google{
+    background: rgb(223, 74, 50);
+}
+.header--user__dropDown .btn-twitter{
+    background: rgb(15, 142, 221);
+}
+
+.header-right .cart--link{
+    text-decoration: none;
+}
+
+.header-right .header--user{
+    color: var(--white-color);
+    font-size: 1.4rem;
+    margin-top: 21px;
+    display: flex;
+    cursor: pointer;
+}
+
+.header-right .account-label {
+    line-height: 15px;
+    margin-left: 5px;
+}
+
+.header-right .header--user i {
+    font-size: 2.6rem;
+    line-height: 40px;
+}
+
+.header-right .account-label>i {
+    font-size: 1.2rem;
+}
+
+.header-right .header--user span {
+    margin-left: 10px;
+}
+
+.header-right .header--user .menu--icon{
+    display: inline;
+}
+.header-right .header-cart{
+    color: var(--white-color);
+    font-size: 1.2rem;
+    line-height: 70px;
+    margin-top: 8px;
+}
+
+.header-right .header-cart .header-cart__wapper{
+    position: relative;
+    font-size: 2.6rem;
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.header-cart .header-cart__wapper .cart--qty{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    background: rgb(253, 216, 53);
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 20px;
+    color: var(--text-color);
+}
+
+.header .header--bottom{
+    height: 32px;
+    line-height: 25px;
+}
+
+.header .header--bottom .header--sale__link{
+    text-decoration: none;
+}
+
+.header .header--bottom .header__quicklinks--container{
+    text-align: center;
+    padding-left: 15px;
+}
+.header__quicklinks--container .header__quicklink--item{
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0px 5px;
+}
+.header .header--bottom .header--sale{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.header--sale i {
+    font-size: 1.6rem;
+    color: yellow;
+    padding-right: 5px;
+    margin-top: 5px;
+}
+.header .header--bottom .header--sale .tiki--seller{
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 1.2rem;
+}
