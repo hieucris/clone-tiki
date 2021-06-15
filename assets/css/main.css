@@ -9,6 +9,135 @@
     display: flex;
     height: 70px;
 }
+
+.header-left .menu-wrapper{
+    position: relative;
+}
+
+.header-left .menu-wrapper:hover .menu--dropDown {
+    opacity: 1;
+    visibility: visible;
+    display: block;
+}
+.header-left .menu-wrapper .menu--dropDown{
+    position: absolute;
+    top: 70px;
+    left: -55px;
+    width: 235px;
+    border-radius: 3px 0 0 3px;
+    border-right: 1px solid #a89d9d;
+    background: var(--white-color);
+    box-shadow: -1px 1px 10px 1px #d1c8c8;
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    transition: 0.4s;
+}
+.menu--dropDown .menu--list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+.menu--dropDown .menu--list .menu--item{
+    width: 100%;
+    height: 34px;
+    transition: 0.4s;
+}
+
+.menu--item .menu--item__wrapper{
+    position: unset;
+}
+
+.menu--item .menu--item__wrapper:hover .menu--item__dropDown {
+    display: block;
+}
+.menu--item .menu--item__wrapper .menu--item__dropDown{
+    position: absolute;
+    top: 0;
+    left: 235px;
+    background: var(--white-color);
+    width: calc(1270px - 234px);
+    height: 544px;
+    border-radius: 0 3px 3px 0;
+    box-shadow: 4px 2px 10px 0px #d1c8c8;
+    display: none;
+    transition: 0.4s;
+}
+.menu--item__dropDown .menu--item__col{
+    padding: 13px 0;
+}
+
+.menu--item__dropDown .menu--item__col .menu--dropDown__link{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    transition: 0.4s;
+}
+
+.menu--item__dropDown .menu--item__col .menu--dropDown__link-active{
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.menu--item__dropDown .menu--item__col .menu--dropDown__link:hover {
+    color: rgb(1, 127, 255);
+}
+.menu--item__dropDown .menu--item__col .menu--item__title{
+    margin-left: 30px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--text-color);
+    padding: 6px 0;
+    cursor: pointer;
+}
+.menu--item__col > ul{
+    list-style: none;
+    padding: 0 30px;
+}
+.menu--item__col > ul > li{
+    padding: 3px 0;
+}
+
+.menu--dropDown .menu--list .menu--item:hover {
+    background: rgb(1, 127, 255);
+}
+
+.menu--dropDown .menu--list .menu--item:hover .menu--item__dropDown {
+    display: block;
+}
+
+.menu--dropDown .menu--list .menu--item:hover:after {
+    opacity: 1;
+}
+
+.menu--dropDown .menu--list .menu--item:after {
+    position: relative;
+    content: "";
+    top: -23px;
+    left: 235px;
+    width: 0px;
+    height:0px;
+    border-bottom: 11px solid transparent;
+    border-top: 11px solid transparent;
+    border-left: 11px solid rgb(1, 127, 255);
+    opacity: 0;
+    transition: 0.4s;
+}
+.menu--list .menu--item .menu--item__link{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    display: flex;
+    padding: 8px 10px;
+}
+
+.menu--list .menu--item .menu--item__link .menu--dropDown__icon{
+    width: 30px;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
 .header-left .logo--link{
     width: 60px;
     height: 40px;
@@ -29,10 +158,6 @@
 .header-left .menu .menu--bar{
     display: flex;
     align-items: center;
-}
-
-.menu--dropDown{
-    opacity: 0;
 }
 
 .header-left .menu .menu--bar i{
@@ -264,3 +389,123 @@ button.btn--search i {
     color: var(--white-color);
     font-size: 1.2rem;
 }
+
+/* ------------------------- end Header ------------------------- */
+
+
+/* ------------------------- start Banner ------------------------- */
+.main{
+    background:rgb(239, 239, 239);
+}
+.main .banner{
+    padding: 15px 0;
+    position: relative;
+}
+.main .banner .slider{
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    height: 278px;
+}
+
+.main .banner .slider:hover .btnSlider {
+    opacity: 0.8;
+}
+.slider .slider__item{
+    position: absolute;
+}
+
+button.btnSlider {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 30px;
+    height: 30px;
+    background-color: #8e7f7f;
+    padding: 30px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.4s;
+    color: var(--white-color);
+    opacity: 0.8;
+}
+
+button.btnSlider i{
+    font-size: 2rem;
+    color: var(--white-color);
+    transition: 0.4s;
+}
+
+button.btnSlider:hover i {
+    color: rgb(1, 127, 255);
+}
+
+button.btnSlider-next {
+    right: 428px;
+}
+
+
+button.btnSlider-prev {
+    left: 0px;
+}
+
+.banner__right {
+    margin-left: 10px;
+}
+
+.banner__right .banner__img {
+    width: 100%;
+    border-radius: 5px;
+}
+ /* ------------ fix file slick.css ------------ */
+ul.slick-dots li {
+    padding: 0 10px;
+    font-size: 3rem;
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+ul.slick-dots li.slick-active {
+    color: rgb(1, 127, 255);
+}
+
+ul.slick-dots {
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.slick-slide img
+{
+    display: block;
+    height: 100%;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* ------------ fix file slick.css ------------ */
+
+/* ------------------------- end Banner ------------------------- */ 
