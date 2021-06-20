@@ -22,8 +22,8 @@
 .header-left .menu-wrapper .menu--dropDown{
     position: absolute;
     top: 70px;
-    left: -55px;
-    width: 235px;
+    left: -60px;
+    width: 240px;
     border-radius: 3px 0 0 3px;
     border-right: 1px solid #a89d9d;
     background: var(--white-color);
@@ -32,6 +32,7 @@
     visibility: hidden;
     display: none;
     transition: 0.4s;
+    z-index: 10;
 }
 .menu--dropDown .menu--list{
     list-style: none;
@@ -57,7 +58,7 @@
     top: 0;
     left: 235px;
     background: var(--white-color);
-    width: calc(1270px - 234px);
+    width: calc(1270px - 232px);
     height: 544px;
     border-radius: 0 3px 3px 0;
     box-shadow: 4px 2px 10px 0px #d1c8c8;
@@ -226,6 +227,7 @@ button.btn--search i {
     opacity: 0;
     visibility: hidden;
     transition: all 0.4s ease-in;
+    z-index: 10;
 }
 
 .header--user__wrapper:hover .header--user__dropDown{
@@ -419,7 +421,7 @@ button.btnSlider {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 10;
+    z-index: 9;
     width: 30px;
     height: 30px;
     background-color: #8e7f7f;
@@ -509,3 +511,166 @@ ul.slick-dots {
 /* ------------ fix file slick.css ------------ */
 
 /* ------------------------- end Banner ------------------------- */ 
+
+
+/* ------------------------- start deal ------------------------- */ 
+.deal{
+    background: rgb(255, 255, 255);
+}
+.deal .deal__top{
+    padding: 10px 20px;
+    border-bottom: 1px solid #f2eaea;
+}
+.deal .deal__top .sale__img--wrap{
+    display: flex;
+}
+
+.deal .deal__top .time__flashSale{
+    float: right;
+    width: 100px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    margin-right: 12px;
+    text-decoration: none;
+}
+.time__flashSale #countdown > span{
+    background-color: rgb(255, 66, 78);
+    color: white;
+    border-radius: 4px;
+    padding: 0 3px;
+    margin:0 3px;
+}
+
+.time__flashSale .icon--next{
+    color: #8e8383;
+    margin-left: 10px;
+}
+
+.deal .deal__content{
+    position: relative;
+    padding: 20px 0;
+}
+.deal .deal__content .btnDeal{
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    width: 30px;
+    height: 60px;
+    background: #e2d1d1;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.deal .deal__content .btnDeal:hover i{
+    color: rgb(1, 127, 255);
+}
+
+.deal .deal__content .btnDeal > i{
+    font-size: 2rem;
+    color: var(--white-color);
+    transition: 0.4s;
+}
+.deal .deal__content .btnDeal-next{
+    left: 1240px;
+}
+.deal .deal__content .btnDeal-prev{
+    left: 0;
+}
+.deal .deal__content .list__deal{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 30px;
+}
+.list__deal .deal__item{
+    display: block;
+    width: 248px;
+    height: 273px;
+    text-decoration: none;
+    padding: 0 25px;
+}
+
+.list__deal .deal__item:hover {
+    box-shadow: 1px -3px 20px 0px #eae2e2;
+}
+.list__deal .deal__item .picture{
+    width: 192px;
+    height: 192px;
+    display: block;
+    margin: auto;
+}
+.list__deal .deal__item .deal__price{
+    color: var(--text-color);
+    font-size: 2rem;
+    text-align: center;
+    padding: 15px 0;
+}
+.list__deal .deal__item .deal__qty{
+    width: 90%;
+    height: 20px;
+    background: rgb(255, 170, 175);
+    border-radius: 10px;
+    margin: auto;
+    position: relative;
+}
+.deal__qty .deals__progress{
+    position: absolute;
+    width: 16%;
+    height: 100%;
+    background: rgb(255, 66, 78);
+    border-radius: 10px;
+}
+.deal__qty span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--white-color);
+}
+
+.slick-disabled {
+     display: none; 
+     pointer-events:none;
+     opacity: 0;
+     visibility: hidden; 
+}
+
+/* ------------------------- end deal ------------------------- */ 
+/* ------------------------- start quicklink ------------------------- */ 
+.quicklinks{
+    margin-top: 30px;
+    background: rgb(255, 255, 255);
+}
+.quicklinks .quicklink__container{
+    padding: 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.quicklinks .quicklink__container .quicklink__item{
+    display: block;
+    width: 103px;
+    height: 100px;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 0;
+}
+.quicklink__item .quicklink__img{
+    width: 50px;
+}
+.quicklink__item span{
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-top: 10px;
+    display: block;
+}
+
+/* ------------------------- end quicklink ------------------------- */ 
+
+ 
