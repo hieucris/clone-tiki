@@ -672,5 +672,64 @@ ul.slick-dots {
 }
 
 /* ------------------------- end quicklink ------------------------- */ 
+/* ------------------------- start banner__quicklink ------------------------- */ 
+
+.banner__primary{
+    margin: 15px 0;
+}
+.banner__primary .banner__primary--wrapper{
+    display: flex;
+    justify-content: space-between;
+    height: 150px;
+}
+.banner__primary .banner__primary--wrapper .banner__primary--link{
+    display: block;
+    width: 295px;
+}
+.banner__primary--wrapper .banner__primary--link .banner__primary--img{
+    border-radius: 20px;
+}
+
+/* ------------------------- end banner__quicklink ------------------------- */ 
+/* ------------------------- start category ------------------------- */ 
+
+.featured__categories{
+    height: 178px;
+    background: rgb(255, 255, 255);
+}
+.featured__categories .featured__categories--top{
+    height: 48px;
+}
+.featured__categories .featured__categories--top .category--top--title{
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 0 20px;
+}
+.featured__categories .featured__categories--content{
+    height: 128px;
+    padding: 12px 0;
+}
+.featured__categories .featured__categories--content .categories__wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.categories__wrapper .category__item{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    width: 116px;
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+.categories__wrapper .category__item .category__img{
+    width: 67%;
+    border-radius: 30px;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+}
+/* ------------------------- end category ------------------------- */ 
 
  
