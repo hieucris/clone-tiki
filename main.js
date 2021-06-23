@@ -51,6 +51,8 @@ $(document).ready(function () {
 
 });
 
+// time countdown sale
+
 var upgradeTime = 18000;
 var seconds = upgradeTime;
 function timer() {
@@ -73,4 +75,83 @@ function timer() {
   }
 }
 var countdownTimer = setInterval("timer()", 1000);
+
+
+// product__tab
+
+const tab__item = document.querySelectorAll('.header__tab--item');
+const tab__product = document.querySelectorAll('.product__content--tab')
+tab__item.forEach((item,index) => {
+  item.onclick = function () {
+    document.querySelector('.header__tab--item.active').classList.remove('active')
+    this.classList.add('active')
+
+    const product = tab__product[index]
+    document.querySelector('.product__content--tab.active').classList.remove('active')
+    product.classList.add('active')
+
+  }
+})
+
+// scroll fix search
+
+window.onscroll = function() {myFunction()};
+
+var product__header = document.querySelector('.product__suggest--header');
+var sticky = product__header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky - 600) {
+    product__header.classList.add("sticky")
+  } else {
+    product__header.classList.remove("sticky");
+  }
+}
+
+
+// product__suggest
+
+$(".product__item1").slice(0, 15).show()
+$(".btn1").on("click", function(){
+    $(".product__item1:hidden").slice(0, 5).slideDown()
+    if ($(".product__item1:hidden").length == 0) {
+        $(".btn1").fadeOut('slow')
+    }
+})
+
+$(".product__item2").slice(0, 10).show()
+$(".btn2").on("click", function(){
+    $(".product__item2:hidden").slice(0, 5).slideDown()
+    if ($(".product__item2:hidden").length == 0) {
+        $(".btn2").fadeOut('slow')
+    }
+})
+
+$(".product__item3").slice(0, 5).show()
+$(".btn3").on("click", function(){
+    $(".product__item3:hidden").slice(0, 5).slideDown()
+    if ($(".product__item3:hidden").length == 0) {
+        $(".btn3").fadeOut('slow')
+    }
+})
+
+$(".product__item4").slice(0, 10).show()
+$(".btn4").on("click", function(){
+    $(".product__item4:hidden").slice(0, 5).slideDown()
+    if ($(".product__item4:hidden").length == 0) {
+        $(".btn4").fadeOut('slow')
+    }
+})
+
+$(".product__item5").slice(0, 5).show()
+$(".btn5").on("click", function(){
+    $(".product__item5:hidden").slice(0, 5).slideDown()
+    if ($(".product__item5:hidden").length == 0) {
+        $(".btn5").fadeOut('slow')
+    }
+})
+
+
+
+
 
