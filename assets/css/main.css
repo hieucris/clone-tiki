@@ -842,5 +842,106 @@ ul.slick-dots {
 }
 
 /* ------------------------- end banner__middle ------------------------- */ 
+/* ------------------------- start product__suggest ------------------------- */ 
+.product__suggest--header.sticky {
+    position: fixed;
+    top: 0;
+    width: 1240px;
+    background: rgb(239, 239, 239);
+    z-index: 10;
+}
 
- 
+.product__suggest--header.sticky + .product__suggest--content {
+    padding-top: 126px;
+}
+.header__wrapper .header--title{
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    margin: 20px 0 2px 0px;
+    z-index: 100;
+}
+.header__wrapper .header__tab{
+    padding: 4px 0;
+    display: flex;
+}
+.header__tab .header__tab--item{
+    height: 80px;
+    width: 203px;
+    background: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 1.4rem;
+    color: #645c5c;
+    cursor: pointer;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+.header__tab .header__tab--item.active{
+    color: rgb(1, 127, 255);
+    border: 1px solid rgb(1, 127, 255);
+}
+.header__tab .header__tab--item .header__tab--img{
+    width: 58px;
+    height: 58px;
+    display: block;
+    margin: auto;
+    padding: 5px;
+}
+.product__suggest--content--wrapper{
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    z-index: 1;
+}
+.product__content--tab{
+    display: none;
+}
+.product__content--tab.active{
+    display: block;
+}
+.product__suggest--content--wrapper .product__item{
+    display: none;
+    text-decoration: none;
+    width: 224px;
+    text-align: center;
+    color: var(--text-color);
+    margin: 12px;
+    z-index: 1;
+}
+/* .product__suggest--content--wrapper .product__item:nth-child(n+6){
+    display: none;
+} */
+.product__item .product__item--img{
+    width: 200px;
+    height: 200px;
+}
+.product__item .product__item--description{
+    padding: 10px 0;
+}
+.product__item--description .product__item--name{
+    font-size: 1.2rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.product__item--description .product__item--price{
+    margin-top: 5px;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.btn__load{
+    font-size: 2rem;
+    border: 1px solid rgb(1, 127, 255);
+    border-radius: 10px;
+    padding: 10px 60px;
+    cursor: pointer;
+    margin: 20px auto;
+    display: flex;
+    color: rgb(1, 127, 255);
+}
+/* ------------------------- end product__suggest ------------------------- */ 
