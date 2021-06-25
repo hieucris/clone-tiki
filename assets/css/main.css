@@ -943,5 +943,11 @@ ul.slick-dots {
     margin: 20px auto;
     display: flex;
     color: rgb(1, 127, 255);
+    transition: 0.4s;
+}
+
+button.btn1.btn__load:hover {
+    color: var(--white-color);
+    background: rgb(1, 127, 255);
 }
 /* ------------------------- end product__suggest ------------------------- */ 
