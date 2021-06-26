@@ -103,10 +103,12 @@ var sticky = product__header.offsetTop;
 function myFunction() {
   if (window.pageYOffset >= sticky - 600) {
     product__header.classList.add("sticky")
-  } else {
+  }
+  else{
     product__header.classList.remove("sticky");
   }
 }
+
 
 
 // product__suggest
